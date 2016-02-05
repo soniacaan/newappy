@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'static_pages/contact'
+  get 'contact' => 'static_pages#contact'
+  get 'resume' => 'static_pages#resume'
+  get 'signup'  => 'users#new'
 
-  get 'static_pages/resume'
 
   resources :microposts
   resources :users

@@ -43,7 +43,10 @@ class UsersControllerTest < ActionController::TestCase
     assert_difference('User.count', -1) do
       delete :destroy, id: @user
     end
-
+    test "should get new" do
+      get :new
+      assert_response :success
+    end
     assert_redirected_to users_path
   end
 end
