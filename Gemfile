@@ -4,6 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use SCSS for stylesheets
+gem 'bcrypt', '~> 3.1.10', require: false
+if Bundler::WINDOWS
+  gem 'bcrypt-ruby', '~> 3.0.0', require: false
+else
+  gem 'bcrypt', '~> 3.1.10', require: false
+end
 gem 'bootstrap-sass',       '3.2.0.0'
 #gem 'bcrypt',               '3.1.9'
 gem 'sass-rails', '~> 5.0'
