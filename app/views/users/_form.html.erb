@@ -1,3 +1,7 @@
+<% provide(:title, 'Sign up') %>
+
+alert-<%= message_type %>
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -10,16 +14,27 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "confirmation" %><br>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "create an account", class: "btn btn-primary" %>
+  </div>
+  </div>
   </div>
 <% end %>

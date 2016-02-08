@@ -6,7 +6,7 @@ gem 'rails', '4.2.3'
 # Use SCSS for stylesheets
 gem 'bcrypt', '~> 3.1.10', require: false
 if Bundler::WINDOWS
-  gem 'bcrypt-ruby', '~> 3.0.0', require: false
+  gem 'bcrypt-ruby', '~> 3.1.0', require: false
 else
   gem 'bcrypt', '~> 3.1.10', require: false
 end
