@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @micropost.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @micropost.body %>
-</p>
+<div class="container">
 
-<p>
-  <strong>User:</strong>
-  <%= @micropost.user_id %>
-</p>
+<div class="row">
 
-<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
-<%= link_to 'Back', microposts_path %>
+
+
+ <div class="field">
+    
+   <h1>	 <%= @micropost.title %> </h1>
+  </div>
+  <div class="field">
+    
+    <%= @micropost.body %>
+  </div>
+  
+
+
+<br>
+<%= link_to 'Edit', edit_micropost_path(@micropost) %>
+<br>
+<%= link_to "<< Back to Articles List", root_url %>
+
+</div>
+</div>

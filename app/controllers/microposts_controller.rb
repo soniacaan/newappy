@@ -1,16 +1,21 @@
 class MicropostsController < ApplicationController
-  before_action :set_micropost, only: [:show, :edit, :update, :destroy]
+  before_filter :admin_user,     only: [:destroy, :edit, :update, :create, :new]
+  before_filter :logged_in_user, only: [:new, :create, :destroy, :edit, :update]
 
-  # GET /microposts
+
+# GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.paginate(page: params[:page])
+  end
+
+  def show
+      @micropost = Micropost.find(params[:id])
   end
 
   # GET /microposts/1
   # GET /microposts/1.json
-  def show
-  end
+  
 
   # GET /microposts/new
   def new
@@ -19,16 +24,19 @@ class MicropostsController < ApplicationController
 
   # GET /microposts/1/edit
   def edit
+    @micropost = Micropost.find(params[:id])
+
   end
 
   # POST /microposts
   # POST /microposts.json
   def create
-    @micropost = Micropost.new(micropost_params)
+    @micropost = current_user.microposts.build(micropost_params)
+
 
     respond_to do |format|
       if @micropost.save
-        format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Micropost was successfully created.' }
         format.json { render :show, status: :created, location: @micropost }
       else
         format.html { render :new }
@@ -40,6 +48,7 @@ class MicropostsController < ApplicationController
   # PATCH/PUT /microposts/1
   # PATCH/PUT /microposts/1.json
   def update
+       @micropost = Micropost.find(params[:id])
     respond_to do |format|
       if @micropost.update(micropost_params)
         format.html { redirect_to @micropost, notice: 'Micropost was successfully updated.' }
@@ -62,13 +71,20 @@ class MicropostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_micropost
-      @micropost = Micropost.find(params[:id])
-    end
+    
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def micropost_params
-      params.require(:micropost).permit(:title, :body, :user_id)
+      params.require(:micropost).permit(:title, :body)
+
     end
+
+    # Confirms an admin user.
+    def admin_user
+      unless current_user && current_user.admin?
+      redirect_to login_url, notice: "admin can only do this action." 
+      end
+    end
+
 end
+
