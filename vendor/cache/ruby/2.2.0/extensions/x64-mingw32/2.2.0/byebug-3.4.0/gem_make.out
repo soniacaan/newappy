@@ -1,0 +1,16 @@
+C:/Ruby22-x64/bin/ruby.exe -r ./siteconf20160212-4288-1lg8j8s.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+generating byebug-x64-mingw32.def
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20160212-4288-1oa8x0k/byebug

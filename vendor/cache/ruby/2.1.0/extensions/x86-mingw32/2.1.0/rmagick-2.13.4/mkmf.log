@@ -1,0 +1,20 @@
+checking for Ruby version >= 1.8.5... -------------------- yes
+
+--------------------
+
+"gcc -o conftest.exe -IC:/RailsInstaller/Ruby2.1.0/include/ruby-2.1.0/i386-mingw32 -IC:/RailsInstaller/Ruby2.1.0/include/ruby-2.1.0/ruby/backward -IC:/RailsInstaller/Ruby2.1.0/include/ruby-2.1.0 -I. -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -LC:/RailsInstaller/Ruby2.1.0/lib -L.    -lCORE_RL_magick_ -lX11  -lmsvcrt-ruby210  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+c:/railsinstaller/devkit/mingw/bin/../lib/gcc/i686-w64-mingw32/4.7.2/../../../../i686-w64-mingw32/bin/ld.exe: cannot find -lCORE_RL_magick_
+c:/railsinstaller/devkit/mingw/bin/../lib/gcc/i686-w64-mingw32/4.7.2/../../../../i686-w64-mingw32/bin/ld.exe: cannot find -lX11
+collect2.exe: error: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return 0;
+8: }
+/* end */
+

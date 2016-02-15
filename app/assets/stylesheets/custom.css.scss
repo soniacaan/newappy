@@ -31,6 +31,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+.title {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -227,7 +234,6 @@ input {
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
   }
   .gravatar {
     float: left;
@@ -249,3 +255,4 @@ span.picture {
     border: 0;
   }
 }
+

@@ -1,0 +1,12 @@
+C:/Ruby22-x64/bin/ruby.exe -r ./siteconf20160212-4288-j4z2tt.rb extconf.rb
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+make "DESTDIR=" install
+echo "Nada."
+Nada.

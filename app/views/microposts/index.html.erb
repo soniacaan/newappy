@@ -2,23 +2,31 @@
 <% provide(:title, "Stuff") %>
 <div class="row">
 
-<p id="notice"><%= notice %></p>
+<div class="col-md-1">
+</div>
+<div class="col-md-11">
+<%= link_to 'New Micropost', new_micropost_path, :class => "btn btn-primary btn-md" %><br>
+<br>
+</div>
+</div>
 
-<div class="col-md-8">
-<%= link_to 'New Micropost', new_micropost_path %><br>
+<div class="row">
 
-<ol class="microposts">   
-      <%= render @microposts %>
+	<span class="microposts">   
 
- </ol>
+
+
+	      <%= render @microposts %>
+
+	 </span>
+ 
+
   <%= will_paginate @micropost %>
-
 
 
   
 
 
-</div>
 </div>
 
 
