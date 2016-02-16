@@ -1,5 +1,7 @@
 # config/flickr.yml
 
-key: "4d2cfa44828fa84913a69333cdf31149"
-secret: "920b67d047dc78e6"
+key: => ENV['flickr_key']
+secret: => ENV['flickr_secret']
 token_cache: "token_cache.yml"
+
+
