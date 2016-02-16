@@ -31,11 +31,31 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-.title {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+.title-header {
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  margin-top: 40px;
   text-align: left;
+  color: #777;
+}
+
+
+.title {
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #000000;
+}
+
+title {
+  font-size: 3em;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #777;
 }
 
 h1 {
@@ -225,10 +245,11 @@ input {
   }
   .content {
     display: block;
-    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     img {
       display: block;
-      padding: 5px 0;
+      padding: 10px 0;
     }
   }
   .timestamp {

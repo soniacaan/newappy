@@ -7,8 +7,7 @@
 
 
  <div class="title">
-    
-   <h1>	 <%= @micropost.title %> </h1>
+    <title id="title">	 <%= @micropost.title %> </h1>
   </div>
 
 
@@ -24,7 +23,7 @@
 <br>
 <%= link_to 'Edit', edit_micropost_path(@micropost) %>
 <br>
-<%= link_to "<< Back to Articles List", root_url %>
+<%= link_to "<< Back to Articles List", root_url, :class => "btn btn-primary btn-md" %>
 
 </div>
 </div>
