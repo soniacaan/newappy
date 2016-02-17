@@ -1,35 +1,39 @@
-<span id="micropost-<%= micropost.id %>">
-<div class="row">
 
-  <ul class="col-md-1">
-        
-   </ul>
+<span id="micropost-<%= micropost.id %>">
+<div class="container">
+<div class="row">
+  <div class="col-md-1">
+  <p id=""></p>
+  </div>
   
-  <ul class="content">
-  <ul class="col-md-3">
-          <ul class="img-rounded">
-            <%= image_tag micropost.picture.url(:thumb) if micropost.picture? %>
-          </ul>
-  </ul>
-  <ul class="col-md-8">
-          <span class="title">
-            <%= link_to micropost.title, micropost_path(micropost) %>
-          </span>
-          <h5>
-          <%= micropost.body.truncate_words(40) %>
-          </h5>
-          <h6>
-          <span class="timestamp">
-            Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-          </span>
-          </h6>
-          <h6>
-            <%= link_to 'Edit', edit_micropost_path(micropost) %>
-            <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </h6>
-  </ul>
-  </ul>
-    
-  </span>
+  <div class="content">
+    <span class="title">
+            <%= link_to micropost.title, micropost_path(micropost, anchor: "head") %>
+    </span>
+    <table style="width:100%">
+      <tr>
+        <td style="width:20%">
+        <span class="sm-logo">
+                <%= image_tag micropost.picture.url(:thumb) if micropost.picture? %>
+        </span>
+       </td>
+        <td style="width:80%">
+             <h5>
+              <%= micropost.body.truncate_words(40) %>
+              </h5>
+              <h6>
+              <span class="timestamp">
+                Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+              </span>
+              </h6>
+              <h6>
+                <%= link_to 'Edit', edit_micropost_path(micropost) %>
+                <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </h6>
+          </td>
+        </tr>
+      </table>
 </div>
+</div>
+ </span>
 

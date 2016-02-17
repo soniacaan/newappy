@@ -1,29 +1,36 @@
+<% provide(:title, @micropost.title) %>
 
 
 <div class="container">
-
 <div class="row">
-
-
-
- <div class="title">
-    <title id="title">	 <%= @micropost.title %> </h1>
-  </div>
-
-
-  <span class="picture">
-    <%= image_tag @micropost.picture.url if @micropost.picture? %><br>
-
-  <span class="content">
-    <%= @micropost.body %>
-  </span>
-  
-
-
-<br>
-<%= link_to 'Edit', edit_micropost_path(@micropost) %>
-<br>
-<%= link_to "<< Back to Articles List", root_url, :class => "btn btn-primary btn-md" %>
-
+	<div class="col-md-1">
+	  </div>
+  <div class="content">
+  <table style="width:80%">
+  	
+  		<tr>
+	    	<div class="title-post" id="head">	 <%= @micropost.title %>
+	     	</div>
+	    </tr>
+	    <tr>
+		  <div class="picture-post">
+		    <%= image_tag @micropost.picture.url if @micropost.picture? %>
+		    </div>
+		 </tr>
+		 <tr>
+		  <div class="body-post">
+		    <%= @micropost.body %>
+		  </div>
+		  </tr>
+		  <tr>
+			<td>
+			<%= link_to 'Edit', edit_micropost_path(@micropost), :class => "btn btn-primary btn-sm" %>
+			</td>
+			<td>
+			<%= link_to "<< Back to Articles List", root_url, :class => "btn-right btn-primary btn-sm" %>
+			</td>
+			</tr>
+	</table>
+</div>
 </div>
 </div>

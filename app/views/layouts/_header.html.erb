@@ -7,8 +7,9 @@
       </div>
         <nav>
           <ul class="nav navbar-nav">
-            <li><%= link_to "Resume",   resume_path %></li>
-            <li><%= link_to "Contact",   contact_path %></li>
+            <li><%= link_to "Ideas", root_url(:anchor => "ideas") %></li>
+            <li><%= link_to "Projects",   resume_path(:anchor => "resume") %></li>
+            <li><%= link_to "Contact",   root_url(:anchor => "contact") %></li>
             <% if logged_in? %>
             <li><%= link_to "Profile",   current_user %></li>
             <% end %>
@@ -18,8 +19,5 @@
       </div>
     </header>
     <br>
-    <div class="jumbotron">
-
-    <%= image_tag("header.jpg", :alt => "header") %>
-    </div>
+    
     

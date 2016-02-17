@@ -2,8 +2,33 @@
 @import "bootstrap";
 
 $white-font: #fff;
+$black-font: #000000;
+$grey-font: #C0C0C0;
+$title-font: #202020;
+$banner-font: #202020;
+
 
 /* universal */
+
+.btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-right {
+  float: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+
+}
+
+.body-post {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
+
 
 body {
   padding-top: 60px;
@@ -34,14 +59,23 @@ h1, h2, h3, h4, h5, h6 {
 .title-header {
   font-size: 2em;
   letter-spacing: 2px;
-  margin-left: 20px;
+  margin-left: 5px;
   margin-top: 40px;
   text-align: left;
-  color: #777;
+  color: $title-font;
 }
 
 
 .title {
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+  color: #000000;
+}
+
+.title-post {
   font-size: 2em;
   letter-spacing: 2px;
   margin-top: 20px;
@@ -55,7 +89,7 @@ title {
   letter-spacing: -1px;
   margin-bottom: 20px;
   text-align: left;
-  color: #777;
+  color: $grey-font;
 }
 
 h1 {
@@ -98,7 +132,7 @@ p {
 }
 
 #front_header {
-  color: $white_font ;
+  color: $banner-font;
   text-decoration: none;
   
 }
@@ -191,6 +225,11 @@ aside {
   margin-top: 15px;
 }
 
+.sm-logo {
+  float: left;
+  margin-right: 10px;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -252,6 +291,20 @@ input {
       padding: 10px 0;
     }
   }
+
+.content-post {
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    img {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+
   .timestamp {
     color: $gray-light;
     display: block;
@@ -277,3 +330,31 @@ span.picture {
   }
 }
 
+.picture-post {
+  float: centre;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  input {
+    border: 0;
+  }
+}
+
+
+/*
+ * Simple CSS stylesheet for a navigation bar and flash messages.
+ */
+main {
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  }
+header {
+  border: 1px solid #d4d4d4;
+  background-image: linear-gradient(to bottom, white, #f2f2f2);
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

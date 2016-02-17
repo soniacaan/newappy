@@ -17,3 +17,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore auth files
+config/application.yml

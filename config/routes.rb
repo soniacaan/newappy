@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'password_resets/edit'
 
   get 'sessions/new'
-
   get 'contact' => 'static_pages#contact'
   get 'resume' => 'static_pages#resume'
   get 'signup'  => 'users#new'
@@ -18,12 +17,15 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
 
+  root 'microposts#index'
+
+  get 'microposts/:id/' => 'microposts#ideas', as: :ideas
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'microposts#index'
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -23,9 +23,9 @@
  <div class="col-md-8">
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
-       <%= render @microposts %>
+       <%form_for(@user,@microposts) do |f| %>
+       DPESMT WPRL
       
-      <%= will_paginate @microposts %>
     <% end %>
   </div>
 </div>
