@@ -15,6 +15,7 @@ gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap-sass',       '3.2.0.0'
 gem 'autoprefixer-rails'
+gem 'ckeditor'
 gem "figaro"
 #gem 'bcrypt',               '3.1.9'
 gem 'sass-rails',         '5.0.2'
