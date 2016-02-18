@@ -1,3 +1,5 @@
+<div class="container">
+<div class="row">
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
   <% if @micropost.errors.any? %>
     <div id="error_explanation">
@@ -10,23 +12,24 @@
       </ul>
     </div>
   <% end %>
-<div class="container">
-
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_area :title %>
+    <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
- <span class="picture">
+ <div class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
-  <div class="actions">
+  </div>
+  <div class="btn btn-primary btn-sm">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
+</div>
+
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {
@@ -35,5 +38,5 @@
       alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
   });
-</div>
+
 </script>

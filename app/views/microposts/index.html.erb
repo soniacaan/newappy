@@ -1,21 +1,35 @@
 
+
 <% provide(:title, "Ideas") %>
 <div class="container">
 <div class="row">
+  <div class="col-md-1">
+  </div>
 
-	<table style="width:100%">
-	<tr>
-	<td style="width:20%">
-			<h2 class="title-header" id="ideas">Ideas</h2>
-	</td>
-	<td style="width:80%">
-		<%= link_to 'New Micropost', new_micropost_path, :class => "btn-right btn-primary btn-sm" %>
-	</td>
-	</tr>
+<div class="col-md-10">
+	<div class="content">
+	
+    <table style="width:100%">
+		<tr>
+		<h0 id="ideas" name="ideas"></h0>
+		<td style="width:90%">
+		
+		<p class="title-header">Ideas</p>
+				
+		</td>
+		<td style="width:10%">
+			<span class="btn-primary">
+			<%= link_to 'New Micropost', new_micropost_path(:anchor => "ideas"), :class => "btn btn-primary btn-sm" %>
+			</span>
+		</td>
+		</tr>
 	</table>
-
-</div>
-
+	</div>
+  <div class="col-md-1">
+  </div>
+	</div>
+	</div>
+	</div>
 
 	<span class="microposts">   
 
@@ -32,7 +46,7 @@
   
 
 
-</div>
+
 
 
 

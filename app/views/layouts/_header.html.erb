@@ -1,23 +1,22 @@
 
+ <div class="navbar navbar-fixed-top navbar-inverse">
+  
 
-<header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-      <div  id="front_header", align="left">
-      <h1>Ideas Connect Us</h1> 
-      </div>
+          <div>
+          <h1 class="frontHeader">Ideas Connect Us</h1> 
+          </div>
         <nav>
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Ideas", root_url(:anchor => "ideas") %></li>
-            <li><%= link_to "Projects",   resume_path(:anchor => "resume") %></li>
-            <li><%= link_to "Contact",   root_url(:anchor => "contact") %></li>
-            <% if logged_in? %>
-            <li><%= link_to "Profile",   current_user %></li>
-            <% end %>
-          </ul>
-
+          <div class="navbar-inner">
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Ideas", root_url(:anchor => "ideas") %></li>
+              <li><%= link_to "Projects",   root_url(:anchor => "project") %></li>
+              <li><%= link_to "Contact",   root_url(:anchor => "contact") %></li>
+              <% if logged_in? %>
+              <li><%= link_to "Profile",   current_user %></li>
+              <% end %>
+            </ul>
+            </div>
         </nav>
       </div>
-    </header>
-    <br>
-    
-    
+      </div>
+    </nav>

@@ -1,21 +1,25 @@
-<footer class="footer">
- <% if logged_in? %>
-<small>
-    <%= link_to "Log out", logout_path, method: "delete" %>
-</small>
-<% else %>
-  <small>
-    <%= link_to "Sign in!", login_path, :class => "btn btn-primary btn-md" %>
-  </small>
-<% end %>
-  <nav>
-    <ul>
-      <li>  </li>
-      <li>
-      <%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %></li>
-      <li><%= link_to "Contact", '#' %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
-    </ul>
-  </nav>
-</footer>
+<div class="container">
+<div class="row">
+<div class="footer">
+     <% if logged_in? %>
+    <small>
+        <%= link_to "Log out", logout_path, method: "delete", :class => "btn btn-primary btn-sm" %>
+    </small>
+    <% else %>
+      <small>
+        <%= link_to "Sign in!", login_path, :class => "btn btn-primary btn-sm" %>
+      </small>
+    <% end %>
+      <nav>
+        <ul>
+          <li>  </li>
+          <li>
+          <%= link_to image_tag("rails.png", alt: "Rails logo"),
+                'http://rubyonrails.org/' %></li>
+          <li><%= link_to "Contact", '#' %></li>
+          <li><a href="http://news.railstutorial.org/">News</a></li>
+        </ul>
+      </nav>
+</div>
+</div>
+</div>

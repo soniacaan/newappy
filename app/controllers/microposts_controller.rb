@@ -11,6 +11,10 @@ class MicropostsController < ApplicationController
 
   def show
       @micropost = Micropost.find(params[:id])
+       respond_to do |format|
+          format.html # show.html.erb
+          format.json { render json: @micropost }
+        end
   end
 
   # GET /microposts/1
@@ -36,7 +40,7 @@ class MicropostsController < ApplicationController
 
     respond_to do |format|
       if @micropost.save
-        format.html { redirect_to root_url, notice: 'Micropost was successfully created.' }
+        format.html { redirect_to root_url(:anchor => "ideas"), notice: 'Micropost was successfully created.' }
         format.json { render :show, status: :created, location: @micropost }
       else
         format.html { render :new }

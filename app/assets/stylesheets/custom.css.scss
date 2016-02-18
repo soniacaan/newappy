@@ -8,24 +8,57 @@ $title-font: #202020;
 $banner-font: #202020;
 
 
-/* universal */
+/* links */
 
-.btn {
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+h0:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -115px; 
+  height: 115px; 
+  visibility: hidden; 
+  
 }
 
-.btn-right {
-  float: right;
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+a:link, a:visited { 
+    color: (internal value);
+    cursor: auto;
+}
+
+a:link:active, a:visited:active { 
+    color: (internal value);
+}
+/* universal */
+
+.ribbon {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+button {
+  padding-top: auto;
+  padding-bottom: auto;
+   
+}
+
+button-right {
   
+  display: block;
+  margin:auto;
+  text-font: $white-font;
+
+   :hover {
+    color: #fff;
+    text-decoration: none;
+    }
 
 }
 
 .body-post {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
 }
 
@@ -57,17 +90,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title-header {
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 2px;
-  margin-left: 5px;
   margin-top: 40px;
-  text-align: left;
+  text-align: center;
   color: $title-font;
 }
 
+p.title-post {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  text-align: left;
+  color: $title-font;
+
+  :hover {
+    color: #fff;
+    text-decoration: none;
+    }
+}
+
+.title-anchor {
+  font-size: 2em;
+  letter-spacing: 2px;
+  padding-left: 5px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: $title-font;
+}
 
 .title {
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 2px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -131,10 +187,10 @@ p {
   text-decoration: none;
 }
 
-#front_header {
-  color: $banner-font;
-  text-decoration: none;
-  
+h1.frontHeader {
+  color: $grey-font;
+  font-size: 2em;
+
 }
 
 /* footer */
@@ -284,8 +340,8 @@ input {
   }
   .content {
     display: block;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     img {
       display: block;
       padding: 10px 0;
@@ -331,8 +387,11 @@ span.picture {
 }
 
 .picture-post {
-  float: centre;
-  margin-top: 10px;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  float: center;
+  margin-top: 20px;
   margin-bottom: 20px;
   input {
     border: 0;
@@ -358,3 +417,4 @@ header {
   margin-bottom: 20px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+

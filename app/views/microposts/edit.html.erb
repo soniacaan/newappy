@@ -1,6 +1,13 @@
+<div class="container">
+<div class="row">
 <h1>Editing Micropost</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @micropost %> |
-<%= link_to 'Back', microposts_path %>
+<div class="ribbon">
+<%= link_to 'Cancel', @micropost, :class => "btn btn-primary btn-sm" %>
+</div>
+<div class="ribbon">
+<%= link_to 'Back', microposts_path, :class => "btn btn-primary btn-sm" %>
+</div>
+</div>
+</div>
