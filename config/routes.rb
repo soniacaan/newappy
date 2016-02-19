@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   root 'microposts#index'
 
   get 'microposts/:id/' => 'microposts#ideas', as: :ideas
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

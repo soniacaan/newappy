@@ -23,17 +23,17 @@
 				 </tr>
 				 <tr style="width:60%">
 				  <span class="body-post">
-				    <%= @micropost.body %>
+				    <%= @micropost.body.html_safe %>
 				  </span>
 				  </tr>
 				  <tr style="width:60%">
 					<td>
 			       <% if logged_in? %>
-					<%= link_to 'Edit', edit_micropost_path(@micropost), :class => "btn btn-primary btn-sm" %>
+					<%= link_to 'Edit', edit_micropost_path(@micropost), :class => "btn btn-primary btn-sm button active" %>
 					</td>
 					<% end %>
 					<td>
-					<%= link_to 'Back to Articles List', root_url, :class => "btn btn-primary btn-sm" %>
+					<%= link_to 'Back to Articles List', root_url, :class => "btn btn-primary btn-sm button active" %>
 					</td>
 					</tr>
 			</table>

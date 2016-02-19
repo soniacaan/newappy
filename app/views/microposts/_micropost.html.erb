@@ -18,7 +18,7 @@
          </td>
           <td style="width:60%">
                <h5>
-                <%= micropost.body.truncate_words(40) %>
+                <%= micropost.body.html_safe.truncate_words(40) %>
                 </h5>
                 <h6>
                 <span class="timestamp">
@@ -26,8 +26,8 @@
                 </span>
                 </h6>
                 <h6>
-                  <%= link_to 'Edit', edit_micropost_path(micropost) %>
-                  <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%= link_to 'Edit', edit_micropost_path(micropost), :class => "btn btn-primary btn-sm button active" %>
+                  <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active" %>
                   </h6>
             </td>
           </tr>
