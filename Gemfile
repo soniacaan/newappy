@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-
-
+gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use SCSS for stylesheets
@@ -16,7 +15,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap-sass',       '3.2.0.0'
 gem 'autoprefixer-rails'
 gem 'ckeditor'
-gem "figaro"
+gem 'figaro'
 #gem 'bcrypt',               '3.1.9'
 gem 'sass-rails',         '5.0.2'
 # Use Uglifier as compressor for JavaScript assets
@@ -49,7 +48,6 @@ gem 'flickr_fu'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-	gem 'sqlite3'
 	gem 'spring',      '1.1.3'
   gem 'byebug',      '3.4.0'
 
@@ -65,7 +63,6 @@ end
 
 
 group :production do
-  gem 'pg',             '0.18.4'
   gem 'rails_12factor', '0.0.2'
   gem 'puma',           '2.11.1'
 end
