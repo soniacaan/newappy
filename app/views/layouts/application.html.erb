@@ -18,10 +18,10 @@
 <body>
 <header>
 <%= render 'layouts/header' %>
-<%= render 'layouts/banner' %>
+
 </header>
 <main role="main">
-
+        <%= render 'layouts/banner' %>
         <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
         <% end %>
@@ -29,13 +29,15 @@
 
               <%= yield %>
 
-</main>
-<project>
+
+
         <%= render 'layouts/project' %>
-</project>
+         <%= render 'layouts/images' %>
+         <%= render 'layouts/contact' %>
+</main>
 <footer>
-    <%= render 'layouts/images' %>
-    <%= render 'layouts/contact' %>
+   
+    
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
 </footer>

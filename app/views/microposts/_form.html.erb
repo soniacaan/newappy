@@ -16,15 +16,16 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.cktext_area :body, :ckeditor => {:language => 'us'} %>
-  </div>
- <div class="picture">
+   <div>
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
   </div>
-  <div class="btn btn-primary btn-sm">
-    <%= f.submit, :class => "btn btn-primary btn-sm button active" %>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.cktext_area :body, :ckeditor => {:language => 'us', :toolbar => 'pure'} %>
+  </div>
+
+  <div class="btn btn-primary btn-sm button active">
+    <%= f.submit %>
   </div>
 <% end %>
 </div>

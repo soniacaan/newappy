@@ -1,10 +1,7 @@
 
 <div class="container">
 <div class="row">
-  <div class="col-md-1">
-      <span id="micropost-<%= micropost.id %>"></span>
-  </div>
-  
+   
   <div class="col-md-10">
       <span>
          <p class="title-post">   <%= link_to micropost.title, micropost_path(micropost, anchor: "head") %> </p>
@@ -18,7 +15,7 @@
          </td>
           <td style="width:60%">
                <h5>
-                <%= micropost.body.html_safe.truncate_words(40) %>
+                <%= micropost.body.truncate_words(40).html_safe %>
                 </h5>
                 <h6>
                 <span class="timestamp">

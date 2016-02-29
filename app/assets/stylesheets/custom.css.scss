@@ -52,6 +52,8 @@ button-right {
   display: block;
   margin:auto;
   text-font: $white-font;
+  text-align:center;
+  margin:auto;
 
    :hover {
     color: #fff;
@@ -194,9 +196,14 @@ p {
   text-decoration: none;
 }
 
-h1.frontHeader {
+p.frontHeader {
   color: $grey-font;
-  font-size: 2em;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 20px;
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 
 }
 
@@ -395,11 +402,8 @@ span.picture {
 
 .picture-post {
   display: block; 
-  margin-left: auto;
-  margin-right: auto;
-  float: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   input {
     border: 0;
   }
@@ -414,6 +418,7 @@ main {
   padding-bottom: 80px;
   width: 100%;
   }
+
 header {
   border: 1px solid #d4d4d4;
   background-image: linear-gradient(to bottom, white, #f2f2f2);
@@ -423,5 +428,6 @@ header {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 }
 

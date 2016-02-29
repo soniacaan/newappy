@@ -9,34 +9,27 @@
 	<div class="col-md-2">
 	</div>
 	 <div class="col-md-8">
-		  <table style="width:60%">
-		  	
-		  		<tr style="width:60%">
-			    	<h0 id="head" name="head" class="title-post"><%= @micropost.title %></h0>
-			    </tr>
-			    <tr style="width:60%">
-				  <div>
-				  <% if @micropost.picture? %>
-				    <%= image_tag @micropost.picture.url, :class => "picture-post" %>
-				    <% end %>
-				    </div>
-				 </tr>
-				 <tr style="width:60%">
-				  <span class="body-post">
-				    <%= @micropost.body.html_safe %>
-				  </span>
-				  </tr>
-				  <tr style="width:60%">
-					<td>
+	 <div>
+	    	<h0 id="head" name="head" class="title-post"><%= @micropost.title %></h0>
+	</div>
+			   
+  	<div class="picture-post">
+		<% if @micropost.picture? %>
+		 <%= image_tag @micropost.picture.url %>
+		 <% end %>
+	</div>
+	<div>
+	  <span class="body-post">
+	   <%= @micropost.body.html_safe %>
+	  </span>
+	  </div>
+	 <div>
 			       <% if logged_in? %>
 					<%= link_to 'Edit', edit_micropost_path(@micropost), :class => "btn btn-primary btn-sm button active" %>
-					</td>
 					<% end %>
-					<td>
 					<%= link_to 'Back to Articles List', root_url, :class => "btn btn-primary btn-sm button active" %>
-					</td>
-					</tr>
-			</table>
+	</div>
+	</div>
   <div class="col-md-2">
   </div>
 </div>
