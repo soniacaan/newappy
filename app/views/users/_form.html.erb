@@ -1,6 +1,7 @@
 <% provide(:title, 'Sign up') %>
 
-
+<div class="container">
+<div class="row">
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -37,3 +38,5 @@
   </div>
   </div>
 <% end %>
+</div>
+</div>
