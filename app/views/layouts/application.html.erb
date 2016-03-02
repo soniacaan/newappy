@@ -20,24 +20,35 @@
 <%= render 'layouts/header' %>
 
 </header>
-<main role="main">
-        <%= render 'layouts/banner' %>
-        <% flash.each do |key, value| %>
+<div class="container">
+<div class="row">
+<div>
+ <%= render 'layouts/banner' %>
+</div>
+<div>
+<% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
         <% end %>
+</div>
+<main role="main">
 
 
               <%= yield %>
 
-
-
-        <%= render 'layouts/project' %>
+</main>
+<div id="imageribbon">
                
         <% cache ("flickr_sidebar") do %>
 <%= render_flickr_sidebar_widget('138220357@N03') %>
                 <% end %>
 
-</main>
+
+               
+
+</div>
+<div>
+  <%= render 'layouts/project' %>
+</div>
 <footer>
    
     

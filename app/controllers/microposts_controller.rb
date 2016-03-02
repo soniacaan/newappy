@@ -1,6 +1,5 @@
 class MicropostsController < ApplicationController
   before_filter :admin_user,     only: [:destroy, :edit, :update, :create, :new]
-  before_filter :logged_in_user, only: [:new, :create, :destroy, :edit, :update]
 
 
 # GET /microposts
@@ -67,11 +66,11 @@ class MicropostsController < ApplicationController
   # DELETE /microposts/1
   # DELETE /microposts/1.json
   def destroy
+    @micropost = Micropost.find(params[:id])
     @micropost.destroy
-    respond_to do |format|
-      format.html { redirect_to microposts_url, notice: 'Micropost was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:success] = "Micropost deleted"
+    redirect_to request.referrer || root_url
+    
   end
 
   private

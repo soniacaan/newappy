@@ -15,9 +15,8 @@ $banner-font: #202020;
    
     background-color:#C0D6E4;
     
-    padding:5px; 
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 
@@ -111,7 +110,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner{
   float: center;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  border: #ffffff;
+
+
+
 
 }
 
@@ -445,13 +448,21 @@ span.picture {
   }
 }
 
+#imageribbon {
+  background-color: white-font;
+  padding-bottom: 20px;
+  padding-bottom: 20px;
+  align: center;
+  display: block; 
+
+  }
 
 /*
  * Simple CSS stylesheet for a navigation bar and flash messages.
  */
 main {
-  background-color: #eee;
-  padding-bottom: 80px;
+  background-color: white-font;
+  padding-bottom: 20px;
   width: 100%;
   }
 
