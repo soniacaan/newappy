@@ -10,6 +10,16 @@ $banner-font: #202020;
 
 /* links */
 
+#article{
+  
+   
+    background-color:#C0D6E4;
+    
+    padding:5px; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
 
 h0:before { 
   display: block; 
@@ -98,12 +108,33 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   }
 
-.title-header {
+
+.banner{
+  float: center;
+  padding-bottom: 40px;
+
+}
+
+p.title-header {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  line-height: 110%;
+  margin-top: 40px;
+  margin-left: 5px;
+  padding-left: 10px;
+  text-align: left;
+  color: $title-font;
+}
+
+.title-banner {
   font-size: 1.5em;
   letter-spacing: 2px;
   margin-top: 40px;
-  text-align: center;
-  color: $title-font;
+  margin-left: 5px;
+  padding-left: 10px;
+  text-align: left;
+
+  color: $grey-font;
 }
 
 p.title-post {
@@ -114,6 +145,11 @@ p.title-post {
   color: $title-font;
 
   :hover {
+    color: #fff;
+    text-decoration: none;
+    }
+
+    :active {
     color: #fff;
     text-decoration: none;
     }
@@ -435,6 +471,15 @@ header {
 * flickr widget
 */
 
+.flickr{
+  
+  display: block; 
+  padding-top: 20px;
+  padding-bottom: 10px;
+  align: center
+
+}
+
 .flickr ul
 {
         list-style-type: none;
@@ -446,13 +491,14 @@ header {
         border-bottom: 0;
         margin: 0;
         padding: 0;
+
 }
 
 .flickr_photo
 {
-        width: 75px;
-        height: 75px;
-        padding: 12px 10px 32px 13px;
+        width: 120px;
+        height: 120px;
+        padding: 10px 10px 10px 10px;
         margin: 0;
         background: #fff url(../images/pixellated/polaroid.jpg) no-repeat;
 }
