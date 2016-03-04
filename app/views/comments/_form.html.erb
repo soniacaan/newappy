@@ -1,0 +1,31 @@
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-5 ribbon">
+<div>
+<%= form_for([@micropost, @micropost.comments.build]) do |f| %>
+  
+   
+    <% @micropost.comments.build.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+      <% end %>
+    
+    
+  </div>
+  <div class="title-comment">
+  <% if current_user %>
+    <h0 class="title-comment"><%= user_name %> Add Your Comment</h0>
+   <% else %>
+   	 <h0 class="title-comment"><%= link_to "(Sign in)", login_path %> To Add Your Comment</h0>
+   <% end %>
+    <%= f.text_area :body, :class => "title-comment" %>
+  </div>
+<div>
+  <button class="btn btn-primary btn-sm button active" type="submit">Submit</button>
+  </div>
+<% end %>
+
+</div>
+</div>
+</div>

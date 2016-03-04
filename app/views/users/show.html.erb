@@ -1,0 +1,42 @@
+<% provide(:title, @user.name) %>
+
+<div class="container">
+<h0 id="head" name="head"></h0>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+    
+    	<h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+        <div>
+        <strong>Email:</strong>
+  <%= @user.email %>
+  </div>
+
+      </h1>
+      </section>
+       <div>
+<%= link_to 'Edit', edit_user_path(@user, :anchor => "head") %> |
+<%= link_to 'Back', root_url(:anchor => "ideas") %>
+
+</div>
+     </aside>
+
+
+</div>
+  
+
+
+ <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @user.microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+
+
+</div>

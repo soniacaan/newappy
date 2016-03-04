@@ -1,0 +1,29 @@
+<div class="container">
+<div class="row">
+<div class="footer">
+     <% if logged_in? %>
+    <small>
+        <%= link_to "Log out", logout_path, method: "delete", :class => "btn btn-primary btn-sm active" %>
+        
+    </small>
+    <% else %>
+      <small>
+        <%= link_to "Sign in!", login_path, :class => "btn btn-primary btn-sm button active" %>
+      </small>
+    <% end %>
+      <nav>
+        <ul>
+          <li>  </li>
+          <li>
+          <%= link_to image_tag("instagram.png", alt: "Instagram", size: "25x25"),
+                'https://www.instagram.com/soniacaan/' %></li>
+          <%= link_to image_tag("twitter.png", alt: "Twitter", size: "25x25"),
+                'https://twitter.com/Sonia_here' %></li>
+          <%= link_to image_tag("linkedin.png", alt: "Linkedin", size: "25x25"),
+                'https://ca.linkedin.com/in/caansonia' %></li>
+          
+        </ul>
+      </nav>
+</div>
+</div>
+</div>

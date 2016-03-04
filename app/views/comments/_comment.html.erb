@@ -1,0 +1,26 @@
+
+
+<div class="container">
+<div class="row">
+
+
+<div class="col-md-6">
+<div>
+ <strong><%= User.find(comment.user_id).name %> </strong>
+  
+</div>
+  <%= comment.body %>
+
+<div>
+
+
+<%= comment.micropost.created_at.strftime("%d %b. %Y") %>
+
+  <%= link_to 'Delete', [comment.micropost, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+
+</div>
+</div>
+</div>
+</div>

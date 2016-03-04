@@ -1,0 +1,65 @@
+
+<% provide(:title, "Ideas") %>
+<div id="article">
+
+<div class="container">
+<div class="row">
+       <div class="col-md-12">
+				
+				
+				
+		</div>
+</div>
+
+
+<div class="row">
+	    <div class="col-md-12">
+	    <% if admin? %>
+	    <%= link_to 'New Micropost', new_micropost_path(:anchor => "ideas"), :class => "btn btn-primary btn-sm active right-button" %>
+	    <% end %>
+			<h0 id="ideas" name="ideas"></h0>
+			<p class="title-header">Ideas - Great ideas are empowered by teams, people who are driven by their passion. Technology can enable change, transform our world.</p>
+		
+		</div>	
+	    <div class="col-md-12">
+	    		<div class="social-buttons">
+<%= social_share_button_tag("Ideas Connect Us. Share & explore.", :url => url_for(:only_path => false)) %>
+				</div>
+	    </div>
+</div>
+ 
+  
+	
+
+	<span class="microposts">   
+
+
+	      <%= render @microposts %>
+
+	 </span>
+ 
+
+  <%= will_paginate @micropost %>
+</div>
+</div>
+	<%= render 'layouts/project' %>
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div id="imageribbon">
+        
+
+               
+
+</div>
+ <div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
