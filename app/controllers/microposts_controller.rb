@@ -87,7 +87,9 @@ class MicropostsController < ApplicationController
       end
     end
 
-    
+    def micropost_params
+      params.require(:micropost).permit(:title, :body, :picture)
+    end
    
      
 

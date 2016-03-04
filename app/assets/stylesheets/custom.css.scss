@@ -141,7 +141,7 @@ p.title-header {
 
 .title-banner {
   font-size: 1.5em;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-top: 40px;
   margin-left: 5px;
   padding-left: 10px;
@@ -152,7 +152,8 @@ p.title-header {
 
 p.title-post {
   font-size: 1.5em;
-  letter-spacing: 2px;
+   line-height: 110%;
+  letter-spacing: 1px;
   margin-top: 40px;
   text-align: left;
   color: $title-font;
