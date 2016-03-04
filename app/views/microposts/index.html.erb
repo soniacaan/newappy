@@ -41,6 +41,12 @@
 
   <%= will_paginate @micropost %>
 </div>
+<div>
+		 <% cache ("flickr_sidebar") do %>
+<%= render_flickr_sidebar_widget('138220357@N03') %>
+                <% end %>
+
+</div>
 </div>
 	<%= render 'layouts/project' %>
 
