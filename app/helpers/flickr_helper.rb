@@ -1,10 +1,10 @@
 # app/helpers/flickr_helper.rb
-  require 'flickr_fu'
+  
 
 module FlickrHelper  
   require 'yaml'
-
-
+  require 'flickr_fu'
+    
     def create
       @flickr = Flickr.new(File.join(Rails.root, 'config', 'flickr.yml'))
       redirect_to flickr.auth.url(:write)
@@ -16,15 +16,17 @@ module FlickrHelper
       current_user.update_attribute :flickr_token, flickr.auth.token.token
     end
    
-    def user_photos(user_id, photo_count = 14)
+    def user_photos(user_id, tags, photo_count = 14)
       @flickr = Flickr.new(File.join(Rails.root, 'config', 'flickr.yml'))
       # now you have full access on the user's data :)
-      @flickr.photos.search(:user_id => user_id).values_at(0..(photo_count - 1))
+      @flickr.photos.search(:user_id => user_id, :tags => tags).values_at(0..(photo_count - 1))
     end
 
-    def render_flickr_sidebar_widget(user_id, photo_count = 14, columns = 7)
+    
+
+    def render_flickr_sidebar_widget(user_id, tags = 'this', photo_count = 7, columns = 7)
       begin
-      photos = user_photos(user_id, photo_count).in_groups_of(7)
+      photos = user_photos(user_id, tags, photo_count).in_groups_of(7)
       render :partial => '/flickr/sidebar_widget', :locals => { :photos => photos }
       rescue Exception
       render :partial => '/flickr/unavailable'
@@ -32,5 +34,20 @@ module FlickrHelper
     
     end
 
+    def render_flickr_sidebar_set(user_id, tags = 'this', photo_count = 14, columns = 7)
+      begin
+      
+      photos = user_photos(user_id, tags, photo_count)
+      im_photos = photos.last(7).in_groups_of(7)
+     
+      
 
+      render :partial => '/flickr/sidebar_set', :locals => { :photos => im_photos }
+      rescue Exception
+      render :partial => '/flickr/unavailable'
+      end
+    
+    end
+
+    
 end

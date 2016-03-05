@@ -1,10 +1,9 @@
 
 <% provide(:title, "Ideas") %>
 <div id="article">
-
 <div class="container">
 <div class="row">
-       <div class="col-md-12">
+ <div class="col-md-12">
 				
 				
 				
@@ -42,29 +41,37 @@
   <%= will_paginate @micropost %>
 </div>
 </div>
-<div>
-	
-		 <% cache ("flickr_sidebar") do %>
-<%= render_flickr_sidebar_widget('138220357@N03') %>
-                <% end %>
 
-</div>
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div id="imageribbon">
+       <div>
+	
+		<% cache ("flickr_sidebar") do %>
+<%= render_flickr_sidebar_widget('138220357@N03') %>
+                               <% end %>
+
+
+		</div> 
+		
+
 
 <div>
 
 	<%= render 'layouts/project' %>
 
 </div>
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div id="imageribbon">
-        
-
-               
-
-</div>
  <div>
+	
+		<% cache ("flickr_sidebar") do %>
+<%= render_flickr_sidebar_set('138220357@N03') %>
+                               <% end %>
+
+
+		</div> 
 </div>
 </div>
 </div>

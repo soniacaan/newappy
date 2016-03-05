@@ -30,14 +30,14 @@
 	   <%= @micropost.body.html_safe %>
 	  </span>
 	  <div>
-	  	<h0 id="comment" name="comment" class="title-comment">Comments</h0>
+	  	<p id="comment" name="comment" class="title-comment">Comments</p>
 	  </div>
 	  <div>	
 		<%= render @micropost.comments %>
 	  </div>
 	  <div>
 	  		
-	  			<h0 id="commentAdd" name="commentAdd" ></h0>
+	  			<p id="commentAdd" name="commentAdd" ></p>
 	  			<% flash.each do |key, value| %>
         		<div class="alert alert-<%= key %>"><%= value %></div>
         		<% end %>

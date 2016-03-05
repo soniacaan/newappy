@@ -18,7 +18,7 @@
 
               <li><%= link_to "Ideas", root_url(:anchor => "ideas") %></li>
               <li><%= link_to "Projects",   root_url(:anchor => "project") %></li>
-              <li><%= link_to "Contact",   root_url(:anchor => "contact") %></li>
+              <li><%= link_to "Contact",   new_contact_path %></li>
               <% if logged_in? %>
               <li><%= link_to "Profile",   user_path(current_user, :anchor => "head") %></li>
               <% end %>

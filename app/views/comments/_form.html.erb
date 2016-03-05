@@ -15,9 +15,9 @@
   </div>
   <div class="title-comment">
   <% if current_user %>
-    <h0 class="title-comment"><%= user_name %> Add Your Comment</h0>
+    <p class="title-comment"><%= user_name %> Add Your Comment</p>
    <% else %>
-   	 <h0 class="title-comment"><%= link_to "(Sign in)", login_path %> To Add Your Comment</h0>
+   	 <p class="title-comment"><%= link_to "(Sign in)", login_path %> To Add Your Comment</p>
    <% end %>
     <%= f.text_area :body, :class => "title-comment" %>
   </div>

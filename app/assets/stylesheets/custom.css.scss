@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "social-share-button";
 
 $white-font: #fff;
 $black-font: #000000;
@@ -207,7 +208,7 @@ title {
   color: $grey-font;
 }
 
-h0.title-comment {
+p.title-comment {
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
@@ -538,13 +539,12 @@ header {
 }
 
 .flickr_photo
-{
-        width: 150px;
-        height: 100px;
+{       
         padding: 10px 10px 10px 10px;
         margin: 0;
-        background: #fff url(../images/pixellated/polaroid.jpg) no-repeat;
+        background: #fff url(../images/header.jpg) no-repeat;
 }
+
 
 /*
 * social media sharing buttons
@@ -552,4 +552,58 @@ header {
 .social-buttons {
  display: block; 
   padding-left: 20px;
+}
+
+
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff url(../images/facebookBW.png) no-repeat;
+}
+
+.social-share-button-twitter {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../i,ages/twitterBW.png);
+}
+
+.social-share-button-linkedin {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/linkedinBW.png) no-repeat;
+}
+
+.hidden { display: none; }
+
+/*flash*/
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
 }

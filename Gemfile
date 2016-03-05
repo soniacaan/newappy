@@ -36,6 +36,9 @@ gem 'jbuilder',             '2.2.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'flickr_fu'
+gem 'mail_form'
+gem 'simple_form'
+require 'flickraw'
 
 
 # Use ActiveModel has_secure_password

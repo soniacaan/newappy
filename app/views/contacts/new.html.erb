@@ -1,0 +1,42 @@
+<div class="container">
+<div class="row">
+<div align="center">
+<div class="col-md-12">
+<div class="col-md-3">
+</div>
+<div class="col-md-6">
+<div align="center">
+
+          <%= link_to image_tag("instagram.png", alt: "Instagram", size: "25x25"),
+                'https://www.instagram.com/soniacaan/' %>
+          <%= link_to image_tag("twitter.png", alt: "Twitter", size: "25x25"),
+                'https://twitter.com/Sonia_here' %>
+          <%= link_to image_tag("linkedin.png", alt: "Linkedin", size: "25x25"),
+                'https://ca.linkedin.com/in/caansonia' %>
+          
+       
+
+
+</div>
+
+  <h3>Contact via email</h3>
+
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :name, :required => true %>
+    <%= f.input :email, :required => true %>
+    <%= f.input :message, :as => :text, :required => true %>
+    <div class= "hidden">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    <div>
+      </br>
+      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+    </div>
+  <% end %>
+ </div>
+ <div class="col-md-3">
+</div>
+</div>
+</div>
+</div>
+</div>
