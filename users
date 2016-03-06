@@ -1,0 +1,122 @@
+\q
+ALTER ROLE vagrant CREATEDB;
+\q
+ALTER ROLE vagrant CREATEDB;
+\q
+\q
+ALTER ROLE vagrant CREATEDB;
+\q
+drop table User;
+drop table user;
+drop table users;
+drop table user;
+\q
+/q
+\q
+User.all
+Users
+\l
+\c blogger_development
+d
+\d
+select * from User
+select * from USer;
+User.all;
+select * from user;
+select * from user;
+\d
+/q
+\q
+/d blogger_development
+/d blogger_development;
+\d blogger_development;
+\q
+/l
+\l;
+\l;
+\c
+\l;
+\c
+exit
+\q;
+\q
+\l
+\q
+drop table appy_development, appy_test;
+drop table appy_development, appy_test
+;
+/l
+;
+\l
+drop table appy_test;
+\l;
+\l
+drop table "appy_developnent", "appy_test";
+\l
+\q
+\l
+\c appydb_development
+/d Users
+;
+\d Users;
+select * from users where email = "sonia.khan@gmail.com"
+;
+SELECT * FROM users WHERE email = 'sonia.khan@gmail.com';
+\c appydb_development
+UPDATE users SET admin ='True' WHERE email = 'sonia.khan@gmail.com'
+;
+commit;
+SELECT admin FROM users where email ='sonia.khan@gmail.com';
+\q
+d
+\d
+select * from users where email = "sonia.khan@gmail.com"
+;
+SELECT * FROM users WHERE email = 'sonia.khan@gmail.com';
+UPDATE users SET admin = 'True' WHERE email = 'sonia.khan@gmail.com';
+commit
+;
+\q
+\d users;
+\c users;
+\l
+\c appydb_development
+\d
+\d users;
+\d
+\d comments
+\d comments
+SELECT user_id FROM comments
+;
+\q
+\d;
+\c appydb_development
+\d;
+\d;
+\d comment;
+\d comments;
+\q;
+\q;
+\q;
+\q
+\c appydb_development
+\d comments;
+\d users
+select admin from users;
+select user.name from users where admin ="t";
+select name from users where admin ="t";
+select name from users where admin = true;
+\c appydb_development
+\d micropost
+\d microposts;
+\q
+c\ appydb_development
+\c appydb_development;
+\d microposts;
+select picture from microposts where id=8
+;
+\q
+c\ appydb_development
+\c appydb_development
+\d users;
+\s users;

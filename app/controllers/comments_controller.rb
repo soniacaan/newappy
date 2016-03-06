@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
     
     before_filter :create_comment, only: [:create]
    
-
+    helper CommentsHelper
 
 
 

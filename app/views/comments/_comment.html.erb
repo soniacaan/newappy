@@ -13,10 +13,9 @@
 
 <div>
 
-
 <%= comment.micropost.created_at.strftime("%d %b. %Y") %>
 
-  <%= link_to 'Delete', [comment.micropost, comment],
+<%= link_to 'Delete', [comment.micropost, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 

@@ -12,7 +12,7 @@ class MicropostsController < ApplicationController
 
   def show
       @micropost = Micropost.find(params[:id])
-     
+
 
        respond_to do |format|
           format.html # show.html.erb
@@ -27,6 +27,7 @@ class MicropostsController < ApplicationController
   # GET /microposts/new
   def new
     @micropost = Micropost.new
+
   end
 
   # GET /microposts/1/edit

@@ -2,7 +2,7 @@ class Micropost < ActiveRecord::Base
 	belongs_to :user
   has_many :comments, dependent: :destroy
   	default_scope -> { order(created_at: :desc) }
-  	mount_uploader :picture, PictureUploader
+  	mount_uploader :picture, PictureUploader, dependent: :destroy
   	validates :title, length: { maximum: 140 }, presence: true
   	validates :user_id, presence: true
     validates :body, presence: true

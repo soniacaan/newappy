@@ -24,16 +24,20 @@
 		<% if @micropost.picture? %>
 		 <%= image_tag @micropost.picture.url %>
 		 <% end %>
+		 
 	</div>
 	<div>
 	  <span class="body-post">
 	   <%= @micropost.body.html_safe %>
 	  </span>
 	  <div>
+	    <% if @micropost.comments.count > 0 %>
 	  	<p id="comment" name="comment" class="title-comment">Comments</p>
 	  </div>
 	  <div>	
+	
 		<%= render @micropost.comments %>
+		<% end %>
 	  </div>
 	  <div>
 	  		

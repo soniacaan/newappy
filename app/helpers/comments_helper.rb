@@ -13,16 +13,18 @@ module CommentsHelper
   	end
   end
 
-  def owner_admin(micropost,comment)
+  def owner_admin
      @micropost = Micropost.find(params[:micropost_id])
     @comment = @micropost.comments.find(params[:id])
-    @userid = @comment.user_id
+    @userid = @comment.user_id if logged_in?
     @admin = current_user.admin if logged_in?
 
-    if (logged_in? && (current_user.id == @userid || @admin == true))
+    if (current_user.id == @userid || @admin == true)
         @owner_admin = true
     end
   end
+
+
 
 
 end
