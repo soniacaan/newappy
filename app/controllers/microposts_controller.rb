@@ -89,7 +89,7 @@ class MicropostsController < ApplicationController
     end
 
     def micropost_params
-      params.require(:micropost).permit(:title, :body, :picture, :type)
+      params.require(:micropost).permit(:title, :body, :picture, :micro_type)
     end
   end 
 

@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
+  
+
+
+
+  root 'microposts#index'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
 
   get 'sessions/new'
   get 'resume' => 'static_pages#resume'
+  get 'projects' => 'static_pages#project', as: :projects
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
@@ -19,7 +26,6 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
 
-  root 'microposts#index'
 
   get 'microposts/:id/' => 'microposts#ideas', as: :ideas
 
