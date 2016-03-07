@@ -1,19 +1,26 @@
 
- <div class="container">
- <div class="navbar navbar-fixed-top navbar-inverse">
- <div class="row">
+ 
 
-          <div class="col-md-2"></div>
-          <div class="col-md-8">
-          <p class="title-banner">Ideas Connect Us</p> 
-          </div>
-          <div class="col-md-2"></div>
+  <div class="container">
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+   <div class="col-md-2">
+      <div>
+                    <p class="header-title">Ideas Connect Us</p> 
+
+
+      </div>
+      <div class="logo">
+      <%= link_to(image_tag("sonia4.png", :class => "img-circular", :alt => ".home."), root_url) %>
+     
+      </div>
+      <div> <p class="dash">- - - .</p></div>
   </div>
-  <div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-        <nav>
-          <div class="navbar-inner">
+  <div class="col-md-5">
+    <div class="row">
+          <ul class="custom-menu title-banner invisible">Ideas Connect Us</ul> 
+    </div>
+    <div class="row">
+           <div class="navbar-inner">
             <ul class="nav navbar-nav custom-menu">
 
               <li><%= link_to "Ideas", root_url(:anchor => "ideas") %></li>
@@ -24,12 +31,31 @@
               <% end %>
             </ul>
             </div>
-        </nav>
-      </div>
-      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="row">
+          <ul class="custom-menu title-banner invisible">Ideas Connect Us</ul> 
+    </div>
+    <div class="row">
+           <div class="navbar-inner">
+            <ul class="nav navbar-nav header-share">
 
+              <li><a href="http://twitter.com/home?status=Ideas Connect Us. Share. Explore. <%= root_url %>" title="Share on Twitter"  target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
+         <!-- Facebook -->
+        <li><a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fcaan.herokuapp.com" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+        
+        
+        <!-- LinkedIn --> 
+        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//caan.herokuapp.com/&title=Ideas%20Connect%20Us.%20Share.%20Explore.&summary=&source=" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+
+            </ul>
+            </div>
     </div>
+  </div>
+
+    </nav>
     </div>
-    </div>
+    
 
       

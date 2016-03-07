@@ -1,12 +1,15 @@
 class Micropost < ActiveRecord::Base
 	belongs_to :user
+  belongs_to :micropost_type
   has_many :comments, dependent: :destroy
+  has_many :micropost_type
   	default_scope -> { order(created_at: :desc) }
   	mount_uploader :picture, PictureUploader, dependent: :destroy
   	validates :title, length: { maximum: 140 }, presence: true
   	validates :user_id, presence: true
     validates :body, presence: true
     validate :picture_size
+
 
  private
 

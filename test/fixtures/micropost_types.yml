@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: MyText
+  micropost_id: 
+
+two:
+  type: MyText
+  micropost_id: 

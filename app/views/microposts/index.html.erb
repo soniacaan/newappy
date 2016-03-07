@@ -17,13 +17,11 @@
 	    <%= link_to 'New Micropost', new_micropost_path(:anchor => "ideas"), :class => "btn btn-primary btn-sm active right-button" %>
 	    <% end %>
 			<h0 id="ideas" name="ideas"></h0>
-			<p class="title-header">Ideas - Great ideas are empowered by teams, people who are driven by their passion. Technology can enable change, transform our world.</p>
+			<p class="title-header">Ideas - ideas are empowered by teams, people who are driven by their passion. Technology can enable change, transform our world. Working with the right people, we can bring ideas to life. </p>
 		
 		</div>	
 	    <div class="col-md-12">
-	    		<div class="social-buttons">
-<%= social_share_button_tag("Ideas Connect Us. Share & explore.", :url => url_for(:only_path => false)) %>
-				</div>
+	    		
 	    </div>
 </div>
  
@@ -51,7 +49,7 @@
        <div>
 	
 		<% cache ("flickr_sidebar") do %>
-<%#= render_flickr_sidebar_widget('138220357@N03') %>
+<%= render_flickr_sidebar_widget('138220357@N03') %>
                                <% end %>
 
 
@@ -67,7 +65,7 @@
  <div>
 	
 		<% cache ("flickr_sidebar") do %>
-<%#= render_flickr_sidebar_set('138220357@N03') %>
+<%= render_flickr_sidebar_set('138220357@N03') %>
                                <% end %>
 
 
