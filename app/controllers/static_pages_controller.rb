@@ -4,5 +4,9 @@ class StaticPagesController < ApplicationController
 
   def resume
   end
+
+   def project
+  end
+  
   
 end

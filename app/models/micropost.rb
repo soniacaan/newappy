@@ -9,6 +9,8 @@ class Micropost < ActiveRecord::Base
   	validates :user_id, presence: true
     validates :body, presence: true
     validate :picture_size
+    enum type: [:business_idea, :social_idea, :mangement, :social]
+
 
 
  private
