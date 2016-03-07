@@ -38,7 +38,7 @@
 <div class="col-md-12">
        <div>
 	
-		<% cache ("flickr_sidebar") do %>
+		<% cache ("flickr_sidebar_widget") do %>
 <%= render_flickr_sidebar_widget('138220357@N03') %>
                                <% end %>
 		</div> 
@@ -48,7 +48,7 @@
 	<%= render 'static_pages/project' %>
 </div>
  <div>
-		<% cache ("flickr_sidebar") do %>
+		<% cache ("flickr_sidebar_set") do %>
 <%= render_flickr_sidebar_set('138220357@N03') %>
                                <% end %>
 		</div> 
