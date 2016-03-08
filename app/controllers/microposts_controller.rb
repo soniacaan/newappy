@@ -1,17 +1,21 @@
 class MicropostsController < ApplicationController
 
 
-  before_filter :admin_user,     only: [:destroy, :edit, :update, :create, :new]
+  before_filter :admin_user, only: [:destroy, :edit, :update, :create, :new]
 
 
 # GET /microposts
   # GET /microposts.json
   def index
+
     @microposts = Micropost.paginate(page: params[:page])
+     @micropost = @micropost.find(params[:type_micro])
   end
 
   def show
       @micropost = Micropost.find(params[:id])
+      @micropost = @micropost.find(params[:type_micro])
+   
 
 
        respond_to do |format|
@@ -89,9 +93,14 @@ class MicropostsController < ApplicationController
     end
 
     def micropost_params
-      params.require(:micropost).permit(:title, :body, :picture, :micro_type, :type)
+      params.require(:micropost).permit(:title, :body, :picture, :type_micro)
     end
-  end 
+
+
+    
+
+
+end 
 
 
 

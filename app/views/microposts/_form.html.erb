@@ -1,6 +1,6 @@
 <div class="container">
 <div class="row">
-<%= form_for(@micropost, html: { multipart: true }) do |f| %>
+<%= form_for(@micropost, @type_micro, html: { multipart: true }) do |f| %>
   <% if @micropost.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
@@ -23,7 +23,10 @@
     <%= f.label :body %><br>
     <%= f.cktext_area :body, :ckeditor => {:language => 'us', :toolbar => 'pure'} %>
   </div>
-  
+  <div class="field">
+    <%= f.label :type_micro %><br>
+    <%= f.text_field :type_micro %>
+  </div>
 
   <div>
   <button class="btn btn-primary btn-sm button active" type="submit">Create Idea</button>

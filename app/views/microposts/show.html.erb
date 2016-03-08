@@ -19,6 +19,8 @@
 	<%= social_share_button_tag(@micropost.title, :url => url_for(:only_path => false)) %>
 
 	</div>
+
+	<div><%= @micropost.type_micro %></div>
 			   
   	<div class="picture-post">
 		<% if @micropost.picture? %>
@@ -29,7 +31,7 @@
 
 	<div>
 		
-		 <%= @micropost.post_type %>
+		 <%= @micropost.type_micro %>
 		
 		 
 	</div>
