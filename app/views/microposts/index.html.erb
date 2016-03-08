@@ -1,11 +1,12 @@
 
 <% provide(:title, "Ideas") %>
+
 <div id="article">
 <div class="container">
 <div class="row">
  <div class="col-md-12">
 				<h0 id="ideas" name="ideas"></h0>			
-		</div>
+</div>
 </div>
 <div class="row">
 	    <div class="col-md-12">
@@ -13,14 +14,15 @@
 	    <%= link_to 'New Micropost', new_micropost_path(:anchor => "ideas"), :class => "btn btn-primary btn-sm active right-button" %>
 	    <% end %>
 			
-			<p class="title-header">Ideas - ideas are empowered by teams, people who are driven by their passion. Technology can enable change, transform our world. Working with the right people, we can bring ideas to life. </p>
-		
+			<p class="title-header">Ideas</p>
+			<p class="blocked">ideas are empowered by teams, individuals who are driven by their passions. Technology can enable change and transform our world. Working with the right people, we can bring ideas to life. </p>	
 		</div>	
 	    <div class="col-md-12">
 	    		
 	    </div>
 </div>
-	<span class="microposts">   
+	<span class="microposts">  
+	
 
 
 	      <%= render @microposts %>
@@ -33,28 +35,32 @@
 
 
 
-<div class="container">
+
 <div class="row">
 <div class="col-md-12">
-       <div>
+     <div>
 	
 		<% cache ("flickr_sidebar_widget") do %>
 <%= render_flickr_sidebar_widget('138220357@N03') %>
                                <% end %>
-		</div> 
+	</div> 
 
-<div id="project">
+
+<div>
 
 	<%= render 'static_pages/project' %>
 </div>
- <div>
+
+ 
+ 	<div>
 		<% cache ("flickr_sidebar_set") do %>
 <%= render_flickr_sidebar_set('138220357@N03') %>
                                <% end %>
-		</div> 
+	</div> 
 </div>
 </div>
-</div>
+
+
 
 
 

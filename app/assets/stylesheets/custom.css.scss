@@ -116,21 +116,38 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-ul.custom-menu {
-  font-size: 18px;
-  padding-top: 10px;
-  padding-left: 10px;
-  align: left;
- 
-  }
+ul.custom-menu{
+
+ padding-bottom: 0px;
+ padding-top: 40px;
+
+
+}
+
+ul.custom-menu li{
+ font-size: 14px;
+ padding-bottom: 0px;
+
+
+}
+
 
 p.header-title {
-  font-size: 18px;
+  font-size: 14px;
   color: $grey-font;
   padding-top: 20px;
   padding-left: 40px;
  
   }
+
+  p.blocked {
+  font-size: 18px;
+  color: $black-font;
+  padding-left: 10px;
+  
+ 
+  }
+
 
 .banner{
   float: center;
@@ -143,15 +160,14 @@ p.header-title {
 }
 
 p.title-header {
-  font-size: 1.2em;
+   font-size: 18px;
   font-weight: bold;
-  letter-spacing: 1px;
-  line-height: 110%;
-  margin-top: 20px;
-  margin-left: 5px;
-  padding-left: 10px;
-  text-align: left;
-  color: $title-font;
+   color: $title-font;
+   padding-top: 40px;
+   padding-left: 10px;
+    padding-bottom: 5px;
+   align: left;
+
 }
 
 .title-banner {
@@ -164,7 +180,7 @@ p.title-header {
 }
 
 p.title-post {
-  font-size: 1.2em;
+ font-size: 14px;
    line-height: 110%;
   letter-spacing: 1px;
   margin-top: 40px;
@@ -191,6 +207,30 @@ p.title-post {
     text-decoration: none;
     }
 
+
+ a:visited { 
+  color: $micro-link-title;
+  background-color: transparent;
+    text-decoration: none;
+    }
+
+  a:hover { 
+    color: $micro-link-title-hov;
+    background: none;
+    outline: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background-color: transparent;
+    }
+
+a:active { 
+  color: $micro-link-title;
+  background-color: transparent;
+    text-decoration: none;
+    }
+
+
 }
 
 .title-anchor {
@@ -214,9 +254,8 @@ p.title-post {
   color: #000000;
 }
 
-.title-post {
-  font-size: 2em;
-  letter-spacing: 2px;
+p.title-post {
+  font-size: 18px;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: left;
@@ -303,7 +342,7 @@ p.dash{
   padding-left: 40px; 
   font-weight: bold;
   color: $grey-font;
-   font-size: 24px;
+   font-size: 20px;
 
 
 
@@ -622,14 +661,31 @@ a.social-buttons:hover{
 }
 
 
-ul.header-share{
-  font-size: 10px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 5px;
-  align: left;
+a.header-share{
+  font-size: 14px;
+   padding-right: 5px;
+    padding-bottom: 0px;
+    padding-top: 40px;
+
+
  
 }
+
+ul.header-share{
+  
+ font-size: 14px;
+ padding-right: 5px;
+ padding-bottom: 0px;
+  padding-top: 40px;
+
+}
+
+ul.header-share li{
+  font-size: 14px;
+ 
+ 
+}
+
 
 ul.projects{
   list-style-type: none;
