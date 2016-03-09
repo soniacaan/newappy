@@ -9,12 +9,12 @@ class MicropostsController < ApplicationController
   def index
 
     @microposts = Micropost.paginate(page: params[:page])
-     @micropost = @micropost.find(params[:type_micro])
+   
   end
 
   def show
       @micropost = Micropost.find(params[:id])
-      @micropost = @micropost.find(params[:type_micro])
+     
    
 
 
