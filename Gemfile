@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'flickr_fu'
 gem 'mail_form'
 gem 'simple_form'
-gem 'aws-sdk'
+
 
 
 
