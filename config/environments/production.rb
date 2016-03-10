@@ -77,21 +77,7 @@ Rails.application.configure do
   }
 
 
-CarrierWave.configure do |config|
-     config.cache_dir = "#{Rails.root}/tmp/"
-      config.storage = :fog
-      config.permissions = 0666
-config.fog_directory     =  ENV['S3_Bucket']
-    config.fog_credentials = {
-      # Configuration for Amazon S3
-      :provider         =>     'AWS',
-      :aws_access_key_id =>     ENV['S3_ACCESS_KEY'],
-      :aws_secret_access_key => ENV['S3_SECRET_KEY'],
-      :aws_region => ENV['S3_Region'],
-      :endpoint => 'https://caansonia.s3-website-us-west-2.amazonaws.com',
-      :path_style => true
-      
-    }
+
     
                  # To let CarrierWave work on heroku
 
@@ -109,4 +95,5 @@ config.fog_directory     =  ENV['S3_Bucket']
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
 end
