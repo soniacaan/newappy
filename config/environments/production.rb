@@ -76,6 +76,27 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
+
+CarrierWave.configure do |config|
+     config.cache_dir = "#{Rails.root}/tmp/"
+      config.storage = :fog
+      config.permissions = 0666
+config.fog_directory     =  ENV['S3_Bucket']
+    config.fog_credentials = {
+      # Configuration for Amazon S3
+      :provider         =>     'AWS',
+      :aws_access_key_id =>     ENV['S3_ACCESS_KEY'],
+      :aws_secret_access_key => ENV['S3_SECRET_KEY'],
+      :aws_region => ENV['S3_Region'],
+      :endpoint => 'https://caansonia.s3-website-us-west-2.amazonaws.com',
+      :path_style => true
+      
+    }
+    
+                 # To let CarrierWave work on heroku
+
+    
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
