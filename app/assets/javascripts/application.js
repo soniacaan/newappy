@@ -16,6 +16,7 @@
 //= require ckeditor/init
 //= require bootstrap
 //= require bootstrap-sprockets
+//= depend_on_asset "bootstrap.js"
 //= require social-share-button
 //= require_tree .
 //= home

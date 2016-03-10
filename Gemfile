@@ -18,11 +18,8 @@ gem 'ckeditor'
 gem 'figaro'
 gem 'social-share-button', '~> 0.1.6'
 #gem 'bcrypt',               '3.1.9'
-gem 'sass-rails',         '5.0.2'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
 gem 'execjs'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
@@ -38,7 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'flickr_fu'
 gem 'mail_form'
 gem 'simple_form'
-gem 'sprockets_better_errors'
+gem 'aws-sdk'
+
 
 
 
@@ -73,5 +71,11 @@ group :production do
 
 end
 
+
+group :assets do
+	gem 'sass-rails',         '5.0.2'
+	gem 'coffee-rails', '~> 4.1.0'
+	gem 'uglifier'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
