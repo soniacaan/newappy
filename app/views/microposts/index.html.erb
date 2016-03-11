@@ -11,8 +11,10 @@
 <div class="row">
 	    <div class="col-md-12">
 	    <% if admin? %>
+	    <div>
 	    <%= link_to 'New Micropost', new_micropost_path(:anchor => "ideas"), :class => "btn btn-primary btn-sm active right-button" %>
 	    <% end %>
+	    </div>
 	 		<div class="header-box">
 			<p class="title-header">Ideas</p>
 			<p class="blocked">ideas are empowered by teams, individuals who are driven by their passions. Technology can enable change and transform our world. Working with the right people, we can bring ideas to life. </p>	
@@ -23,6 +25,7 @@
 	    	
 	    </div>
 </div>
+<div class="row">
 	<span class="microposts">  
 	
 
@@ -32,6 +35,7 @@
 	 </span>
 
   <%= will_paginate @micropost %>
+</div>
 </div>
 </div>
 

@@ -1,21 +1,44 @@
 
-<div class="container">
-<div class="row">
-  <div class="col-md-10 ribbon body-box">
+
+  <div class="col-md-12 ribbon">
+  <div class="row">
+     <div class="col-md-12">
      
-      <div>
          <p class="title-post"><%= link_to micropost.title, micropost_path(micropost, anchor: "head") %> </p>
       </div>
-      
+  </div>
+  <div class="row">
+      <div class="col-md-1">
+     </div>
+     
          <% if micropost.picture? %>
-          <div id="photo" class="col-md-3">
+      <div id="photo" class="col-md-3">
 
           <div class="sm-logo">
                   <%= image_tag micropost.picture.url(:thumb) if micropost.picture? %>
           </div>
-          </div>
-           <% end %>
-          <div class="col-md-7">
+      </div>
+           
+      <div class="col-md-7 body-box">
+          
+               <h5>
+                <%= micropost.body.truncate_words(40).html_safe %>
+                 <%= micropost.type_micro %>
+                </h5>
+                <h6>
+                <span class="timestamp">
+                  Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+                </span>
+                </h6>
+                <h6>
+                <% if admin? %>
+                  <%= link_to 'Edit', edit_micropost_path(micropost), :class => "btn btn-primary btn-sm button active" %>
+                  <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active" %>
+                  <% end %>
+                  </h6>
+           </div> 
+        <% else %> 
+         <div class="col-md-10 body-box">
           
                <h5>
                 <%= micropost.body.truncate_words(40).html_safe %>
@@ -31,16 +54,14 @@
                   <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active" %>
                   <% end %>
                   </h6>
-           
-            </div>
-          
-          </div> 
-     
-      
+           </div> 
+           <% end %>
      <div class="col-md-1">
      </div>
+     </div>
 </div>
-</div>
+
+
 
 
 

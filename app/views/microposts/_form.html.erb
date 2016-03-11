@@ -19,6 +19,10 @@
    <div>
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
   </div>
+   <div class="field">
+    <%= f.label :type_micro %><br>
+    <%= f.text_field :type_micro %>
+  </div>
   <div class="field">
     <%= f.label :body %><br>
     <%= f.cktext_area :body, :ckeditor => {:language => 'us', :toolbar => 'pure'} %>

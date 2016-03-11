@@ -9,13 +9,17 @@ class MicropostsController < ApplicationController
   def index
 
     @microposts = Micropost.paginate(page: params[:page])
+     
+    
    
   end
 
   def show
       @micropost = Micropost.find(params[:id])
-     
+         
+
    
+
 
 
        respond_to do |format|
@@ -93,11 +97,11 @@ class MicropostsController < ApplicationController
     end
 
     def micropost_params
-      params.require(:micropost).permit(:title, :body, :picture)
+      params.require(:micropost).permit(:title, :body, :picture, :type_micro)
     end
 
 
-    
+   
 
 
 end 

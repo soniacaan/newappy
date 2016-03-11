@@ -27,5 +27,8 @@ module Appy
     # Do not swallow errors in after_commit/after_rollback callbacks.
     
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
+    config.gem "nokogiri"
+    config.gem "htmlentities"
   end
 end

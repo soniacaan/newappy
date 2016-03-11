@@ -5,3 +5,5 @@ require File.expand_path('../application', __FILE__)
 Rails.application.initialize!
 
 require 'flickr_fu'
+require 'htmlentities'
+require 'nokogiri'

@@ -93,6 +93,7 @@ hr.style-seven:before { /* Not really supposed to work, but does */
   
 
   display: inline block;
+  
   border-bottom: 1px solid $black-font;
  
 
@@ -153,14 +154,7 @@ button:hover, button:focus, button:active, button:target{
 button-right {
   
   display: block;
-  margin:auto;
-  text-font: $white-font;
-  text-align:center;
-  top-padding: 60px;
-
-   :hover {
-    color: #fff;
-    }
+  padding-bottom: 10px;
 
 }
 
@@ -228,6 +222,7 @@ p.header-title {
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 10px;
+ line-height: 120%
   
   }
 
