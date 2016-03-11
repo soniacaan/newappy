@@ -22,7 +22,7 @@
       <div class="col-md-7 body-box">
           
                <h5>
-                <%= truncate_html micropost.body, :length => 200 %>
+                <%= truncate_html micropost.body, :length => 200, :omission => '...(continued)' %>
                  <%= micropost.type_micro %>
                 </h5>
                 <h6>
@@ -41,7 +41,7 @@
          <div class="col-md-10 body-box">
           
                <h5>
-                <%= truncate_html micropost.body, :length => 200 %>
+                <%= truncate_html micropost.body, :length => 200, :omission => '...(continued)' %>
                 </h5>
                 <h6>
                 <span class="timestamp">
