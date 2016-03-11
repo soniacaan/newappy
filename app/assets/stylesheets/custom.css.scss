@@ -18,6 +18,87 @@ $micro-link-title-hov: #777777;
 
 }
 
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: white-font;
+    text-align: center;
+}
+hr.style-eight:after {
+    
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+/* Double-color dashed line */
+
+hr.style-three {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+hr-bottom{
+  padding: 10px;
+    border: none;
+    border-top: medium double #333;
+    color: white-font;
+    text-align: center;
+ 
+}
+
+hr-body{
+  display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 6px;
+    color: black-font;
+ 
+}
+
+hr.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.header-box{
+  display: inline block;
+  border-bottom: 2px solid $black-font;
+  border-top: 4px solid $black-font;
+
+}
+
+.body-box{
+  
+
+  display: inline block;
+  border-bottom: 1px solid $black-font;
+ 
+
+}
+
+
 #article{
   
     background-color:#C0D6E4;
@@ -48,8 +129,8 @@ h0:before {
 /* universal */
 
 .ribbon {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .ribbon-project {
@@ -146,6 +227,7 @@ p.header-title {
   padding-left: 10px;
   padding-top: 10px;
   padding-left: 10px;
+  padding-bottom: 10px;
   
   }
 
