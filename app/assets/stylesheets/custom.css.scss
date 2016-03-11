@@ -9,12 +9,20 @@ $title-font: #202020;
 $banner-font: #202020;
 $micro-link-title: #555555;
 $micro-link-title-hov: #777777; 
-
+$dot-color: #cc0000;
 
 /* links */
 
 .alert{
   color: red ;
+
+}
+
+p.dot-color{
+  color:$dot-color;
+   font-weight: bold;
+   font-size: 20px;
+   letter-spacing: -2px;
 
 }
 
@@ -265,6 +273,7 @@ p.title-post {
   text-align: left;
   color: $micro-link-title;
   text-decoration: none;
+  padding-left: 10px;
 
     :visited { 
   color: $micro-link-title;
