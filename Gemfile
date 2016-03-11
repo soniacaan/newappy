@@ -37,6 +37,8 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'nokogiri'
 gem 'htmlentities'
+gem 'truncate_html'
+gem 'html_truncator'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

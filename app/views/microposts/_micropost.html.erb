@@ -22,7 +22,7 @@
       <div class="col-md-7 body-box">
           
                <h5>
-                <%= micropost.body.truncate_words(40).html_safe %>
+                <%= truncate_html micropost.body, :length => 200 %>
                  <%= micropost.type_micro %>
                 </h5>
                 <h6>
@@ -41,7 +41,7 @@
          <div class="col-md-10 body-box">
           
                <h5>
-                <%= micropost.body.truncate_words(40).html_safe %>
+                <%= truncate_html micropost.body, :length => 200 %>
                 </h5>
                 <h6>
                 <span class="timestamp">
