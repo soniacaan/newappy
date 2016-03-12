@@ -8,21 +8,20 @@
 <div class="container">
 
 <div class="row">
+<h0 id="head" name="head"></h0>
+<div class="ribbon">
 	<div class="col-md-2">
 	</div>
 	 <div class="col-md-8">
 	 <div>
-	 		<h0 id="head" name="head"></h0>
+	 		
 	    	<p class="title-idea"><%= @micropost.title %></p>
 	</div>
 	<div>
 	<%= social_share_button_tag(@micropost.title, :url => url_for(:only_path => false)) %>
 
 	</div>
-	<div>
-		Type of Micro
-		<% @micropost.type_micro %>	
-	</div>
+	
 			   
   	<div class="picture-post">
 		<% if @micropost.picture? %>
@@ -73,6 +72,7 @@
 					<% end %>
 					<%= link_to 'Back to Ideas', root_url, :class => "btn btn-primary btn-sm button active" %>
 	</div>
+</div>
 </div>
 </div>
 </div>
