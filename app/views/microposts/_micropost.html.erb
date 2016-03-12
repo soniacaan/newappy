@@ -34,6 +34,9 @@
                 <% if admin? %>
                   <%= link_to 'Edit', edit_micropost_path(micropost), :class => "btn btn-primary btn-sm button active" %>
                   <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active" %>
+                  <% else %>
+                    <%= link_to 'Edit', edit_micropost_path(micropost), :class => "btn btn-primary btn-sm button active invisible" %>
+                  <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active invisible" %>
                   <% end %>
                   </h6>
            </div> 
@@ -52,6 +55,9 @@
                 <% if admin? %>
                   <%= link_to 'Edit', edit_micropost_path(micropost), :class => "btn btn-primary btn-sm button active" %>
                   <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active" %>
+                  <% else %>
+                    <%= link_to 'Edit', edit_micropost_path(micropost), :class => "btn btn-primary btn-sm button active invisible" %>
+                  <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active invisible" %>
                   <% end %>
                   </h6>
            </div> 
