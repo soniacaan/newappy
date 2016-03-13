@@ -8,10 +8,11 @@
       </div>
   </div>
   <div class="row">
+   <% if micropost.picture? %>
       <div class="col-md-1">
      </div>
      
-         <% if micropost.picture? %>
+        
       <div id="photo" class="col-md-3">
 
           <div class="sm-logo">
@@ -41,6 +42,8 @@
                   </h6>
            </div> 
         <% else %> 
+         <div class="col-md-1">
+     </div>
          <div class="col-md-10 body-box">
           
                <h5>
