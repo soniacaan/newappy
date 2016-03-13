@@ -24,12 +24,12 @@
           </div>
       </div>
            
-      <div class="col-md-7 body-box">
+      <div class="col-md-7">
           
-               <h5>
-                <%= truncate_html micropost.body, :length => 200, :omission => '...(continued)' %>
-                 <%= micropost.type_micro %>
-                </h5>
+               <div class="color-fix">
+                <%= truncate_html micropost.body, :length => 200, :omission => '...(continued)', :class => "color-fix" %>
+                
+                </div>
                 <h6>
                 <span class="timestamp">
                   Posted <%= time_ago_in_words(micropost.created_at) %> ago.
@@ -44,11 +44,13 @@
                   <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active invisible" %>
                   <% end %>
                   </h6>
+                  <div class="body-box">
+                  </div>
            </div> 
         <% else %> 
          <div class="col-md-1">
      </div>
-         <div class="col-md-10 body-box">
+         <div class="col-md-10">
           
                <h5>
                 <%= truncate_html micropost.body, :length => 200, :omission => '...(continued)' %>
@@ -67,6 +69,8 @@
                   <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary btn-sm button active invisible" %>
                   <% end %>
                   </h6>
+                   <div class="body-box">
+                  </div>
            </div> 
            <% end %>
      <div class="col-md-1">

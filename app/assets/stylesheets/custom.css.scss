@@ -107,6 +107,32 @@ hr.style-seven:before { /* Not really supposed to work, but does */
 
 }
 
+div.color-fix {
+ 
+  background-color:#C0D6E4;
+  border-bottom:#C0D6E4;
+  border-top:#C0D6E4;
+  border-color:#C0D6E4;
+  border-style: none;
+}
+
+div.color-fix li{
+ 
+  background-color:#C0D6E4;
+  border-color:#C0D6E4;
+  border-bottom:#C0D6E4;
+  border-top:#C0D6E4;
+  border-style: none;
+}
+
+div.color-fix ul{
+ 
+  background-color:#C0D6E4;
+  border-bottom:#C0D6E4;
+  border-top:#C0D6E4;
+  border-color: #C0D6E4;
+  border-style: none;
+  }
 
 #article{
   
@@ -260,6 +286,18 @@ p.title-header {
    align: left;
 
 }
+
+banner-fill {
+   font-size: 18px;
+  font-weight: bold;
+   color: $title-font;
+   padding-top: 25px;
+   padding-left: 10px;
+    padding-bottom: 0px;
+   align: left;
+
+}
+
 
 .title-banner {
   letter-spacing: 1px;
