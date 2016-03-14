@@ -3,7 +3,7 @@
   <div class="col-md-12 ribbon">
   <div class="row">
     <div class="col-md-1">
-          <p class="invisible">Space</p>
+          <p class="invisible">updated space</p>
      </div>
      
      <div class="col-md-11">
@@ -52,9 +52,10 @@
      </div>
          <div class="col-md-10">
           
-               <h5>
-                <%= truncate_html micropost.body, :length => 200, :omission => '...(continued)' %>
-                </h5>
+              <div class="color-fix">
+                <%= truncate_html micropost.body, :length => 200, :omission => '...(continued)', :class => "color-fix" %>
+                
+                </div>
                 <h6>
                 <span class="timestamp">
                   Posted <%= time_ago_in_words(micropost.created_at) %> ago.
