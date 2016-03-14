@@ -2,7 +2,23 @@
 <html>
 <head>
   <title><%= yield(:title) %></title>
-  <meta name="Ideas" content="<%= content_for?(:description) ? yield(:description) : "Share Ideas" %>">
+  
+  <!-- for Facebook -->   
+   <meta property="og:title" content="Ideas and Projects" /> 
+  <meta property="og:image" content="https://caansonia.com/assets/header-56303a92002a20af5adde46f8db149028c756d4953cea1f0090183125b28e9ae.jpg" /> 
+  <meta property="og:description" content="Ideas connect us. Share. Explore" /> 
+  <meta property="og:url" content="https://caansonia.com">
+  <!-- for Google -->
+  <meta name="description" content="Ideas connect us. Share. Explore" />
+  <meta name="keywords" content="Ideas. Projects. Transformation. Technology. Entrepreneurship" />
+  <meta name="author" content="Sonia Caan" />
+  <meta name="copyright" content="Sonia Caan" />
+  <meta name="application-name" content="Sonia Caan and Ideas" />
+  <!-- for Twitter -->          
+  <meta name="twitter:card" content="Ideas and Projects" />
+  <meta name="twitter:title" content="Ideas and Projects" />
+  <meta name="twitter:description" content="Ideas connect us. Share. Explore" />
+  <meta name="twitter:image" content="https://caansonia.com/assets/header-56303a92002a20af5adde46f8db149028c756d4953cea1f0090183125b28e9ae.jpg" />
 
   <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track' => true %>
