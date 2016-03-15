@@ -15,7 +15,7 @@ class MicropostsController < ApplicationController
   end
 
   def show
-      @micropost = Micropost.find(params[:id])
+      @micropost = Micropost.friendly.find(params[:id])
          
 
    
@@ -40,7 +40,7 @@ class MicropostsController < ApplicationController
 
   # GET /microposts/1/edit
   def edit
-    @micropost = Micropost.find(params[:id])
+    @micropost = Micropost.friendly.find(params[:id])
 
   end
 
@@ -64,7 +64,7 @@ class MicropostsController < ApplicationController
   # PATCH/PUT /microposts/1
   # PATCH/PUT /microposts/1.json
   def update
-       @micropost = Micropost.find(params[:id])
+       @micropost = Micropost.friendly.find(params[:id])
     respond_to do |format|
       if @micropost.update(micropost_params)
         format.html { redirect_to @micropost, notice: 'Micropost was successfully updated.' }
@@ -79,12 +79,14 @@ class MicropostsController < ApplicationController
   # DELETE /microposts/1
   # DELETE /microposts/1.json
   def destroy
-    @micropost = Micropost.find(params[:id])
+    @micropost = Micropost.friendly.find(params[:id])
     @micropost.destroy
     flash[:success] = "Micropost deleted"
     redirect_to request.referrer || root_url
     
   end
+
+  
 
   private
     
@@ -100,7 +102,7 @@ class MicropostsController < ApplicationController
       params.require(:micropost).permit(:title, :body, :picture, :type_micro)
     end
 
-
+   
    
 
 

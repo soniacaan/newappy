@@ -18,7 +18,9 @@
     <%= javascript_include_tag Ckeditor.cdn_url %>
     <%= render 'layouts/shim' %>
     <%= favicon_link_tag 'favicon-32x32.png', size: '32x32' %>
-    <%= render 'layouts/social' %>
+    <% if content_for?(:head) %>
+         <%= yield(:head) %>
+    <% end %>
 
 </head>
 

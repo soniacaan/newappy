@@ -198,6 +198,8 @@ GEM
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
     formatador (0.2.5)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     guard (2.13.0)
@@ -305,7 +307,7 @@ GEM
       activesupport (= 4.2.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.1.0)
+    rake (11.1.1)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -380,6 +382,7 @@ DEPENDENCIES
   figaro
   flickr_fu
   fog (= 1.36.0)
+  friendly_id (~> 5.1.0)
   guard-minitest (= 2.3.1)
   html_truncator
   htmlentities

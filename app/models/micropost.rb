@@ -5,6 +5,8 @@ class Micropost < ActiveRecord::Base
   belongs_to :micropost_type
   has_many :comments, dependent: :destroy
   has_many :micropost_type
+  extend FriendlyId
+  friendly_id :title, use: :slugged
   	default_scope -> { order(created_at: :asc) }
   	mount_uploader :picture, PictureUploader, dependent: :destroy
   	validates :title, length: { maximum: 140 }, presence: true
@@ -23,5 +25,7 @@ class Micropost < ActiveRecord::Base
         errors.add(:picture, "should be less than 6MB")
       end
     end
+
+
 
 end
