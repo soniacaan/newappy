@@ -1,0 +1,41 @@
+<%= form_for [@albumn, @photo_albumns], html: { :multipart => true } do |f| %>
+
+  <div>
+    
+      <%= f.text_area :name, placeholder: "enter name of albumn" %>
+
+    
+  </div>
+	
+	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+  	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+  	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+  	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+  	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+  	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+  	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+  	<div>
+    <%= f.file_field :photo_albumn, accept: 'image/jpeg,image/gif,image/png', :class => "btn btn-primary btn-sm button active" %>
+  	</div>
+
+  <p>
+    <%= f.submit 'Upload Photo' %>
+    or
+    <%= link_to 'Cancel', [@album, @photo] %>
+  </p>
+
+<%- end %>

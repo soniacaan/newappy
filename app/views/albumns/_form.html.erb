@@ -1,0 +1,21 @@
+<%= form_for(@albumn, html: { multipart: true}) do |f| %>
+ <% @albumn.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+   <% end %>
+  <div>
+  <%= f.text_area :name, placeholder: "enter name of albumn" %>
+  </div>
+  <div>
+   <% if @albumn.photo_albumns.count > 0 %>
+    <% render @albumn.photo_albumns %>
+    <% end %>
+  </div>
+
+  <%= render 'photo_albumns/form' %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

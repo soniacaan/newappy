@@ -1,0 +1,17 @@
+<div class="container">
+<div class="row">
+<div class="flickr">
+<p>//Discovering British Columbia//</p>
+  <ul>
+    <% albumn.each do |a| -%>
+      <li>
+       
+          <%= image_tag(a.albumn.photo_albumn, :class => 'flickr_photo', :title => p.title, :border => 0, :size => '150x133') %>
+       
+      </li>
+    <% end -%>
+  </ul>
+  <p align="right">//Town of Hope: mountains + rivers + lakes//</p>
+</div>
+</div>
+</div>

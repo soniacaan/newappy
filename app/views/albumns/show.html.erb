@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<ul>
+<% @albumn.each do |a| %>
+<tr>
+<td><%= image_tag a.photo_albumn.url %></td>
+
+</tr> 
+<% end %>
+<%= link_to 'Edit', edit_albumn_path(@albumn) %> |
+
+</ul>
+
+<%= link_to 'Back', albumns_path %>

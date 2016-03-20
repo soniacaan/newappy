@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :albumns
   mount Ckeditor::Engine => '/ckeditor'
   
 
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   get 'password_resets/new'
 
   get 'password_resets/edit'
+
 
   get 'sessions/new'
   get 'resume' => 'static_pages#resume'
@@ -24,7 +26,9 @@ Rails.application.routes.draw do
       resources :comments
   end
   resources :password_resets,     only: [:new, :create, :edit, :update]
-
+  resources :albumns do
+    resources :photo_albumn
+  end
 
 
   get 'microposts/:id/' => 'microposts#ideas', as: :ideas

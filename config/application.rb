@@ -28,6 +28,9 @@ module Appy
     
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
+    config.autoload_paths += %W(#{config.root}/lib)
+
+
     config.gem "nokogiri"
     config.gem "htmlentities"
   end

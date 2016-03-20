@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Albumns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @albumns.each do |albumn| %>
+      <tr>
+        <td><%= link_to 'Show', albumn %></td>
+        <td><%= link_to 'Edit', edit_albumn_path(albumn) %></td>
+        <td><%= link_to 'Destroy', albumn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Albumn', new_albumn_path %>
